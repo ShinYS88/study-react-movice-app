@@ -1,5 +1,6 @@
 import { func } from "prop-types";
 import React from "react";
+import "./About.css";
 
 function About() {
     return (

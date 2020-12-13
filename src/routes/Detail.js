@@ -1,4 +1,5 @@
 import React from "react";
+import "./Detail.css";
 
 // function Detail(props) {
 //     console.log(props);
@@ -23,18 +24,27 @@ class Detail extends React.Component {
 
         if (state) {
             return (
-                <div>
-                    <h1>{state.title}</h1>
-                    <img src={state.poster} alt={state.title} title={state.title} />
-                    <div className="movie__data">
-                        <h3 className="movie__title">{state.title}</h3>
-                        <h3 className="movie__year">{state.year}</h3>
-                        <h3 className="movie__summary">{state.summary.slice(0, 140)}...</h3>
-                        <ul className="movie__genres">
-                            {state.genres.map((genre, index) => (<li key={index} className="genres__genre">{genre}</li>))}
-                        </ul>
+                <div className="detail">
+                    <div className="detail__title">
+                        <h1 className="movie__title">{state.title}</h1>
                     </div>
-                </div>
+                    <div className="detail__container">
+                        <div className="left">
+                            <img src={state.poster} alt={state.title} title={state.title} />
+
+                        </div>
+                        <div className="right">
+                            <ul className="movie__genres">
+                                <h3 className="movie__year">year : {state.year}</h3>
+                                <h3 className="movie__year" style={{ marginBottom: "5px" }}>genre</h3>
+                                {state.genres.map((genre, index) => (<li key={index} className="genres__genre">{genre}</li>))}
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="detail__content">
+                        <h3 className="movie__summary">{state.summary}</h3>
+                    </div>
+                </div >
             )
         } else {
             return null;
