@@ -4,6 +4,7 @@ import Home from "./routes/Home";
 import About from "./routes/About";
 import Detail from "./routes/Detail";
 import Navigation from "./components/Navigation";
+import "./App.css";
 
 // BrowserRouter : github pages 등록시 정확히 설정이 어렵다. => HashRouter 사용을 추천
 
