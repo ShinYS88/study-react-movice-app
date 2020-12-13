@@ -9,15 +9,23 @@ import Navigation from "./components/Navigation";
 
 function App() {
     return (
-        <BrowserRouter>
+        < BrowserRouter >
             {/* <HashRouter> */}
             <Navigation />
+
             <Route path="/" exact={true} component={Home} />
             <Route path="/about" component={About} />
-            {/* <Route path="/movie-detail" component={Detail} /> */}
             <Route path="/movie/:id" component={Detail} />
+
+            {/* <Route path="/study-react-movie-app" exact={true} component={Home} />
+            <Route path="/study-react-movie-app/about" component={About} />
+            <Route path="/study-react-movie-app/movie/:id" component={Detail} /> */}
+
+            {/* <Route path="/movie-detail" component={Detail} /> */}
             {/* </HashRouter> */}
-        </BrowserRouter>
+
+
+        </BrowserRouter >
     )
 }
 
