@@ -53,3 +53,14 @@
   margin-right: 10px;
   font-size: 14px;
 }
+
+
+@media screen and (max-width: 400px){
+  .movies .movie a {
+  grid-template-columns: minmax(100px, 1fr) 2fr;
+}
+
+.movie img {
+  max-width: 100px;
+}
+}
