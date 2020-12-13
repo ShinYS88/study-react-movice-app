@@ -9,8 +9,8 @@ import Navigation from "./components/Navigation";
 
 function App() {
     return (
-        < BrowserRouter >
-            {/* <HashRouter> */}
+        < HashRouter >
+            {/* < BrowserRouter > */}
             <Navigation />
 
             <Route path="/" exact={true} component={Home} />
@@ -22,10 +22,11 @@ function App() {
             <Route path="/study-react-movie-app/movie/:id" component={Detail} /> */}
 
             {/* <Route path="/movie-detail" component={Detail} /> */}
-            {/* </HashRouter> */}
+
+            {/* </BrowserRouter > */}
+        </HashRouter >
 
 
-        </BrowserRouter >
     )
 }
 
